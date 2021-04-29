@@ -5,9 +5,11 @@ Home: https://projects.coin-or.org/Cgl
 
 Package license: EPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/coin-or-cgl-feedstock/blob/master/LICENSE.txt)
 
 Summary: COIN-OR Cut Generation Library (Cgl)
+
+Development: https://github.com/coin-or/Cgl
 
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators
 that can be used with other COIN-OR packages that make use of cuts, such as,
@@ -47,6 +49,13 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/coin-or-cgl-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10720&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/coin-or-cgl-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -69,6 +78,7 @@ Installing `coin-or-cgl` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `coin-or-cgl` can be installed with:
@@ -139,9 +149,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
