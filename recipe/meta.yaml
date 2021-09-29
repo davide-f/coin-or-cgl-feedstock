@@ -6,8 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/coin-or/Cgl/archive/releases/{{ version }}.tar.gz
+    url: https://github.com/coin-or/Cgl/archive/releases/{{ version }}.tar.gz
     sha256: cfeeedd68feab7c0ce377eb9c7b61715120478f12c4dd0064b05ad640e20f3fb
+    patches:
+       - 0001-Patch-for-downstream.patch
 
 build:
   number: 1
