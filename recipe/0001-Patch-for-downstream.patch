@@ -1,0 +1,26 @@
+From 2385654d4ff5e5d3532981b5b9c59e599d676bfa Mon Sep 17 00:00:00 2001
+From: BastianZim <10774221+BastianZim@users.noreply.github.com>
+Date: Wed, 29 Sep 2021 21:12:36 +0200
+Subject: [PATCH] Patch for downstream
+
+---
+ Cgl/cgl.pc.in | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/Cgl/cgl.pc.in b/Cgl/cgl.pc.in
+index 9219256..68d4e51 100644
+--- a/Cgl/cgl.pc.in
++++ b/Cgl/cgl.pc.in
+@@ -7,6 +7,7 @@ Name: CGL
+ Description: COIN-OR Cut Generation Library
+ URL: https://projects.coin-or.org/Cgl
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lCgl @CGLLIB_PCLIBS@
++Libs: -L${libdir} -lCgl
++Libs.private: @CGLLIB_PCLIBS@
+ Cflags: -I${includedir}
+-Requires: @CGLLIB_PCREQUIRES@
++Requires.private: @CGLLIB_PCREQUIRES@
+-- 
+2.33.0
+
