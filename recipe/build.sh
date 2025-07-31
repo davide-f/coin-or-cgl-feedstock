@@ -17,7 +17,7 @@ if [[ "${target_platform}" == win-* ]]; then
   CLP_INC=( --with-clp-incdir='${LIBRARY_PREFIX_COIN}' )
   OSICLP_LIB=( --with-osiclp-lib='${LIBRARY_PREFIX}/lib/libOsiClp.lib' )
   OSICLP_INC=( --with-osiclp-incdir='${LIBRARY_PREFIX_COIN}' )
-  EXTRA_FLAGS=( --enable-msvc ) 
+  EXTRA_FLAGS=( --enable-msvc=MD ) 
 else
   # Get an updated config.sub and config.guess (for mac arm and lnx aarch64)
   cp $BUILD_PREFIX/share/gnuconfig/config.* ./Cgl 
