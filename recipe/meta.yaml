@@ -13,10 +13,9 @@ source:
     - patches/0002-Patch-for-downstream.patch
 
 build:
-  number: 5
+  number: 6
   run_exports:
     - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-    - mkl-static  # [win]
 
 requirements:
   build:
@@ -44,7 +43,7 @@ requirements:
     - libcblas
     - liblapack
     - liblapacke  # [unix]
-    - mkl-static  # [win]
+    - mkl-devel  # [win]
     - zlib
     - bzip2
   run_constrained:
