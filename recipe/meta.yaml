@@ -37,7 +37,6 @@ requirements:
     - coin-or-utils
     - coin-or-osi
     - coin-or-clp
-    - blas-devel
     - mkl-devel  # [win]
   run_constrained:
     - coincbc * *_metapackage
